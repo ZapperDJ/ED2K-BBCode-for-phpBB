@@ -1,4 +1,4 @@
-# ED2K-BBCode-for-phpBB
+# ED2K BBCode for phpBB
 
 This BBCode enables support for ED2K links on phpBB, displaying the eMule icon following the filename and then the file size. Tested on v3.0.12
 
