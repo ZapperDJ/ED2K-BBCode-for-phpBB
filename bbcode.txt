@@ -1,0 +1,50 @@
+BBCODE
+------
+[ED2K]{TEXT}[/ED2K]
+
+
+
+HTML Substitution
+-----------------
+<script language="javascript">
+function ParseLink(str,mode)
+{
+var str1 = str.substring(13,str.length - 2);
+var parts = new Array();
+parts = str1.split('|');
+var filename = parts[0];
+var filesize = (parts[1] / 1024) / 1024 /1024;
+
+	if (mode == "title") {
+		if (filename.length > 100) {
+			return filename.substring(0,99);
+		}
+		else {
+			return filename;
+		}
+	}
+	if (mode == "size") {
+		if (Math.floor(filesize) == 0) {
+			filesize = filesize * 1024;
+			if (Math.floor(filesize) == 0) {
+				filesize = filesize * 1024;
+				if (Math.floor(filesize) == 0) {
+					filesize = filesize * 1024;
+					return ' (' + filesize.toFixed(0) + ' B)';
+				}
+				else {
+					return ' (' + filesize.toFixed(2) + ' KiB)';
+				}
+			} 
+			else {
+				return ' (' + filesize.toFixed(2) + ' MiB)';
+			}
+		}
+		else {
+			return ' (' + filesize.toFixed(2) + ' GiB)';
+		}
+	} 
+}
+</script>
+
+<img src="./images/smilies/emule.gif" alt=":emule:" title="eMule"><a href="{TEXT}"><script type="text/javascript">document.write(ParseLink("{TEXT}","title"));</script></a><span style="color: #FFFF00;  font-style: italic;"><script type="text/javascript">document.write(ParseLink("{TEXT}","size"));</script></span>
