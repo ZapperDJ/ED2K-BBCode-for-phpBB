@@ -47,4 +47,4 @@ var filesize = (parts[1] / 1024) / 1024 /1024;
 }
 </script>
 
-<img src="./images/smilies/emule.gif" alt=":emule:" title="eMule"><a href="{TEXT}"><script type="text/javascript">document.write(ParseLink("{TEXT}","title"));</script></a><span style="color: #FFFF00;  font-style: italic;"><script type="text/javascript">document.write(ParseLink("{TEXT}","size"));</script></span>
+<img src="./images/smilies/emule.png" alt=":emule:" title="eMule"><a href="{TEXT}"><script type="text/javascript">document.write(ParseLink("{TEXT}","title"));</script></a><span style="color: #FFFF00;  font-style: italic;"><script type="text/javascript">document.write(ParseLink("{TEXT}","size"));</script></span>
